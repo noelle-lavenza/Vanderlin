@@ -211,7 +211,6 @@ GLOBAL_PROTECT(admin_verbs_debug)
 	/client/proc/cmd_display_init_log,
 	/client/proc/cmd_display_overlay_log,
 	/client/proc/reload_configuration,
-	/datum/admins/proc/create_or_modify_area,
 	/client/proc/returntolobby,
 	/client/proc/tracy_next_round,
 	/client/proc/start_tracy,

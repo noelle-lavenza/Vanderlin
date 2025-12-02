@@ -72,12 +72,6 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 /turf/open/transparent/openspace/show_bottom_level()
 	return FALSE
 
-/turf/open/transparent/openspace/zAirIn()
-	return TRUE
-
-/turf/open/transparent/openspace/zAirOut()
-	return TRUE
-
 /turf/open/transparent/openspace/zPassIn(atom/movable/A, direction, turf/source)
 	if(direction == DOWN)
 		for(var/obj/O in contents)

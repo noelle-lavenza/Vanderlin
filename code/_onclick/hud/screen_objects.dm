@@ -157,20 +157,6 @@
 	QDEL_NULL(book)
 	. = ..()
 
-/atom/movable/screen/area_creator
-	name = "create new area"
-	icon_state = "area_edit"
-	screen_loc = ui_building
-
-/atom/movable/screen/area_creator/Click()
-	if(usr.incapacitated(IGNORE_GRAB) || (isobserver(usr) && !IsAdminGhost(usr)))
-		return TRUE
-	var/area/A = get_area(usr)
-	if(!A.outdoors)
-		to_chat(usr, "<span class='warning'>There is already a defined structure here.</span>")
-		return TRUE
-	create_area(usr)
-
 /atom/movable/screen/language_menu
 	name = "language menu"
 	icon_state = "talk_wheel"

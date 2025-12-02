@@ -886,11 +886,6 @@
 	browser.set_content(dat.Join())
 	browser.open()
 
-/datum/admins/proc/create_or_modify_area()
-	set category = "Debug"
-	set name = "Create or modify area"
-	create_area(usr)
-
 //
 //
 //ALL DONE

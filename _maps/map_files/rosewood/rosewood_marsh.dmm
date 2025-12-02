@@ -6,16 +6,14 @@
 /area/indoors/lich)
 "ab" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/table/wood/crafted,
 /turf/open/floor/ruinedwood/darker,
 /area/outdoors/bog)
 "ac" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /turf/open/floor/ruinedwood/darker,
 /area/outdoors/bog)
@@ -145,8 +143,7 @@
 /area/indoors/lich)
 "aT" = (
 /obj/structure/fluff/railing/border{
-	dir = 9;
-	icon_state = "border"
+	dir = 9
 	},
 /turf/open/floor/ruinedwood/turned/darker,
 /area/indoors/lich)
@@ -164,8 +161,7 @@
 /area/indoors/lich)
 "aW" = (
 /obj/structure/fluff/walldeco/church/line{
-	dir = 1;
-	icon_state = "churchslate"
+	dir = 1
 	},
 /obj/structure/fluff/statue/knight,
 /turf/open/floor/church/purple,
@@ -179,8 +175,7 @@
 /area/outdoors/bog)
 "ba" = (
 /obj/structure/stairs{
-	dir = 1;
-	icon_state = "stairs"
+	dir = 1
 	},
 /turf/open/floor/carpet/purple,
 /area/indoors/lich)
@@ -209,8 +204,7 @@
 "bg" = (
 /obj/structure/table/wood/plain,
 /obj/item/reagent_containers/glass/carafe/silver/redwine{
-	pixel_x = -5;
-	pixel_y = 0
+	pixel_x = -5
 	},
 /obj/item/reagent_containers/glass/cup/silver{
 	pixel_x = 8;
@@ -224,7 +218,6 @@
 /area/outdoors/bog)
 "bl" = (
 /obj/structure/stairs{
-	icon_state = "stairs";
 	dir = 1
 	},
 /turf/open/floor/ruinedwood,
@@ -380,8 +373,7 @@
 /area/indoors/lich)
 "cD" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
@@ -391,7 +383,6 @@
 /area/outdoors/bog)
 "cE" = (
 /obj/machinery/light/fueled/wallfire{
-	pixel_x = 0;
 	pixel_y = -31
 	},
 /obj/structure/chair/stool,
@@ -502,8 +493,7 @@
 	dir = 1
 	},
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -550,8 +540,7 @@
 	dir = 8
 	},
 /obj/structure/fluff/walldeco/church/line{
-	dir = 4;
-	icon_state = "churchslate"
+	dir = 4
 	},
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/fluff/railing/border{
@@ -613,8 +602,7 @@
 /area/outdoors/bog)
 "dR" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/table/wood/plain,
 /obj/effect/spawner/map_spawner/loot/armor,
@@ -622,8 +610,7 @@
 /area/indoors/lich)
 "dS" = (
 /obj/structure/fluff/walldeco/painting/queen{
-	pixel_x = 31;
-	pixel_y = 0
+	pixel_x = 31
 	},
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/lich)
@@ -664,8 +651,7 @@
 /area/indoors/cave)
 "ee" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -678,7 +664,6 @@
 	dir = 10
 	},
 /obj/machinery/light/fueled/firebowl{
-	pixel_x = 0;
 	pixel_y = 6
 	},
 /turf/open/floor/ruinedwood/darker,
@@ -775,8 +760,7 @@
 /area/indoors/lich)
 "eK" = (
 /obj/machinery/light/fueled/wallfire/candle{
-	pixel_y = -32;
-	pixel_x = 0
+	pixel_y = -32
 	},
 /turf/open/floor/grass/cold,
 /area/outdoors/bog)
@@ -795,8 +779,7 @@
 	dir = 1
 	},
 /obj/structure/fluff/railing/border{
-	dir = 9;
-	icon_state = "border"
+	dir = 9
 	},
 /turf/open/floor/ruinedwood,
 /area/outdoors/bog)
@@ -938,8 +921,7 @@
 /area/indoors/lich)
 "fD" = (
 /obj/structure/fluff/walldeco/church/line{
-	dir = 4;
-	icon_state = "churchslate"
+	dir = 4
 	},
 /obj/item/natural/glass/shard,
 /turf/open/floor/churchrough/purple,
@@ -1059,8 +1041,7 @@
 	pixel_y = 10
 	},
 /obj/item/gem/diamond{
-	pixel_x = -10;
-	pixel_y = 0
+	pixel_x = -10
 	},
 /obj/item/statue/silver/gnome{
 	pixel_x = 5;
@@ -1084,8 +1065,7 @@
 /area/outdoors/bog)
 "gB" = (
 /obj/structure/fluff/walldeco/church/line{
-	dir = 1;
-	icon_state = "churchslate"
+	dir = 1
 	},
 /obj/structure/closet/crate/chest/neu_fancy,
 /obj/item/paper{
@@ -1109,8 +1089,7 @@
 	dir = 4
 	},
 /obj/structure/fluff/railing/wood{
-	dir = 1;
-	icon_state = "woodrailing"
+	dir = 1
 	},
 /turf/open/floor/naturalstone,
 /area/outdoors/bog)
@@ -1146,7 +1125,6 @@
 /area/indoors/mountains)
 "gM" = (
 /obj/structure/stairs{
-	icon_state = "stairs";
 	dir = 1
 	},
 /obj/structure/fluff/railing/border{
@@ -1198,7 +1176,6 @@
 "gW" = (
 /obj/structure/rack/shelf/biggest,
 /obj/item/reagent_containers/glass/bottle/stronghealthpot{
-	pixel_x = 0;
 	pixel_y = -2
 	},
 /obj/item/reagent_containers/glass/bottle/stronghealthpot{
@@ -1472,8 +1449,7 @@
 /area/outdoors/bog)
 "iq" = (
 /obj/structure/stairs{
-	dir = 1;
-	icon_state = "stairs"
+	dir = 1
 	},
 /turf/open/floor/ruinedwood,
 /area/indoors/lich)
@@ -1517,8 +1493,7 @@
 	dir = 8
 	},
 /obj/structure/table/wood/fancy{
-	pixel_x = 5;
-	pixel_y = 0
+	pixel_x = 5
 	},
 /turf/open/floor/ruinedwood/turned/darker,
 /area/indoors/lich)
@@ -1553,8 +1528,7 @@
 "iW" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -1584,8 +1558,7 @@
 /area/indoors/lich)
 "ja" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /turf/open/floor/tile/masonic/single,
 /area/indoors/lich)
@@ -1608,8 +1581,7 @@
 "jh" = (
 /obj/structure/table/wood/crafted,
 /obj/item/fishing/lure/deluxe{
-	pixel_x = -7;
-	pixel_y = 0
+	pixel_x = -7
 	},
 /obj/item/fishing/lure/deluxe{
 	pixel_x = 7;
@@ -1765,13 +1737,6 @@
 	},
 /turf/open/floor/tile,
 /area/indoors/lich)
-"kh" = (
-/obj/machinery/light/fueled/wallfire{
-	pixel_y = 0;
-	pixel_x = 32
-	},
-/turf/open/floor/ruinedwood,
-/area/indoors/lich)
 "kk" = (
 /obj/structure/spider/stickyweb,
 /obj/structure/spider/stickyweb{
@@ -1786,8 +1751,7 @@
 /area/indoors/lich)
 "kn" = (
 /obj/structure/fluff/railing/wood{
-	dir = 1;
-	icon_state = "woodrailing"
+	dir = 1
 	},
 /turf/open/floor/cobblerock,
 /area/outdoors/bog)
@@ -1802,8 +1766,7 @@
 /area/indoors/lich)
 "kw" = (
 /obj/structure/fluff/railing/wood{
-	dir = 1;
-	icon_state = "woodrailing"
+	dir = 1
 	},
 /turf/open/floor/cobble,
 /area/outdoors/bog)
@@ -1934,8 +1897,7 @@
 	},
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/fluff/railing/border{
-	dir = 9;
-	icon_state = "border"
+	dir = 9
 	},
 /turf/open/floor/church/purple,
 /area/outdoors/bog)
@@ -2013,8 +1975,7 @@
 /area/outdoors/bog)
 "lW" = (
 /obj/structure/fluff/railing/wood{
-	dir = 8;
-	icon_state = "woodrailing"
+	dir = 8
 	},
 /turf/open/floor/grass/cold,
 /area/outdoors/bog)
@@ -2113,12 +2074,10 @@
 /area/indoors/cave)
 "mJ" = (
 /obj/structure/stairs{
-	icon_state = "stairs";
 	dir = 1
 	},
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /turf/open/floor/ruinedwood,
 /area/outdoors/bog)
@@ -2167,8 +2126,7 @@
 	dir = 1
 	},
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -2238,12 +2196,10 @@
 /area/indoors/lich)
 "no" = (
 /obj/structure/stairs{
-	icon_state = "stairs";
 	dir = 1
 	},
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -2293,13 +2249,6 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/cobble,
 /area/indoors/lich)
-"nB" = (
-/obj/structure/stairs{
-	dir = 4;
-	icon_state = "stairs"
-	},
-/turf/open/floor/ruinedwood,
-/area/indoors/cave)
 "nC" = (
 /obj/structure/table/wood/plain,
 /obj/item/reagent_containers/glass/bowl/iron{
@@ -2361,8 +2310,7 @@
 	dir = 1
 	},
 /obj/structure/fluff/railing/wood{
-	dir = 8;
-	icon_state = "woodrailing"
+	dir = 8
 	},
 /turf/open/floor/naturalstone,
 /area/outdoors/bog)
@@ -2447,8 +2395,7 @@
 /area/indoors/lich)
 "ol" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /turf/open/floor/ruinedwood,
 /area/outdoors/bog)
@@ -2555,8 +2502,7 @@
 /area/indoors/lich)
 "pf" = (
 /obj/structure/stairs{
-	dir = 4;
-	icon_state = "stairs"
+	dir = 4
 	},
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/mountains)
@@ -2564,7 +2510,6 @@
 /obj/structure/fluff/railing/border,
 /obj/structure/lever/wall{
 	pixel_x = 18;
-	pixel_y = 0;
 	redstone_id = "Marsh3"
 	},
 /turf/open/floor/tile/masonic/spiral,
@@ -2606,8 +2551,7 @@
 /area/indoors/mountains)
 "px" = (
 /obj/structure/fluff/railing/wood{
-	dir = 1;
-	icon_state = "woodrailing"
+	dir = 1
 	},
 /turf/open/floor/grass/cold,
 /area/outdoors/bog)
@@ -2642,8 +2586,7 @@
 	dir = 4
 	},
 /obj/structure/fluff/railing/wood{
-	dir = 1;
-	icon_state = "woodrailing"
+	dir = 1
 	},
 /turf/open/floor/grass/cold,
 /area/outdoors/bog)
@@ -2847,8 +2790,7 @@
 /area/outdoors/bog)
 "ri" = (
 /obj/structure/fluff/walldeco/church/line{
-	dir = 1;
-	icon_state = "churchslate"
+	dir = 1
 	},
 /obj/structure/table/stone_small,
 /obj/item/statue/iron/deformed,
@@ -2862,8 +2804,7 @@
 	dir = 8
 	},
 /obj/structure/fluff/railing/border{
-	dir = 9;
-	icon_state = "border"
+	dir = 9
 	},
 /obj/machinery/light/fueled/firebowl/standing,
 /turf/open/floor/ruinedwood,
@@ -2901,8 +2842,7 @@
 /area/outdoors/bog)
 "rw" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
@@ -3031,7 +2971,6 @@
 /area/outdoors/bog)
 "sn" = (
 /obj/machinery/light/fueled/wallfire{
-	pixel_x = 0;
 	pixel_y = 32
 	},
 /turf/open/floor/ruinedwood/darker,
@@ -3152,8 +3091,7 @@
 "sY" = (
 /obj/structure/table/wood/plain,
 /obj/item/reagent_containers/glass/cup/golden{
-	pixel_x = -9;
-	pixel_y = 0
+	pixel_x = -9
 	},
 /obj/item/reagent_containers/glass/cup/golden{
 	pixel_x = 4;
@@ -3209,8 +3147,7 @@
 "tm" = (
 /obj/structure/table/wood/plain,
 /obj/item/candle/skull/darkskull/lit{
-	pixel_x = -8;
-	pixel_y = 0
+	pixel_x = -8
 	},
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/lich)
@@ -3374,8 +3311,7 @@
 /area/indoors/lich)
 "ud" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -3406,7 +3342,6 @@
 "um" = (
 /obj/structure/rack/shelf/biggest,
 /obj/item/kitchen/spoon/iron{
-	pixel_x = 0;
 	pixel_y = 3
 	},
 /obj/item/kitchen/spoon/iron{
@@ -3434,8 +3369,7 @@
 	pixel_y = -4
 	},
 /obj/item/kitchen/fork/iron{
-	pixel_x = -6;
-	pixel_y = 0
+	pixel_x = -6
 	},
 /turf/open/floor/tile/kitchen,
 /area/indoors/lich)
@@ -3449,8 +3383,7 @@
 	dir = 1
 	},
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -3509,7 +3442,6 @@
 	dir = 9;
 	icon_state = "tome";
 	icon = 'icons/roguetown/topadd/death/vamp-lord.dmi';
-	pixel_x = 0;
 	pixel_y = 42;
 	name = "Book of Zizo";
 	desc = "A horrible book that contains untold power. This book is currently in use to darken this area in the void."
@@ -3544,8 +3476,7 @@
 /area/indoors/lich)
 "uQ" = (
 /obj/structure/fluff/walldeco/church/line{
-	dir = 1;
-	icon_state = "churchslate"
+	dir = 1
 	},
 /obj/machinery/light/fueled/firebowl/church,
 /turf/open/floor/church/purple,
@@ -3893,8 +3824,7 @@
 	dir = 1
 	},
 /obj/structure/fluff/railing/wood{
-	dir = 8;
-	icon_state = "woodrailing"
+	dir = 8
 	},
 /turf/open/floor/grass/cold,
 /area/indoors/lich)
@@ -3944,8 +3874,7 @@
 /area/indoors/lich)
 "wX" = (
 /obj/structure/fluff/walldeco/painting{
-	pixel_x = 31;
-	pixel_y = 0
+	pixel_x = 31
 	},
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/lich)
@@ -4007,8 +3936,7 @@
 	dir = 8
 	},
 /obj/structure/fluff/railing/wood{
-	dir = 1;
-	icon_state = "woodrailing"
+	dir = 1
 	},
 /turf/open/floor/cobblerock,
 /area/outdoors/bog)
@@ -4086,8 +4014,7 @@
 /area/indoors/mountains)
 "xH" = (
 /obj/structure/table/church{
-	dir = 1;
-	icon_state = "churchtable"
+	dir = 1
 	},
 /obj/item/clothing/ring/gold,
 /turf/open/floor/cobble,
@@ -4117,8 +4044,7 @@
 "xU" = (
 /obj/structure/fluff/psycross/zizocross,
 /obj/structure/fluff/railing/border{
-	dir = 9;
-	icon_state = "border"
+	dir = 9
 	},
 /obj/effect/temp_visual/curse{
 	name = "Shadow of the Past";
@@ -4262,8 +4188,7 @@
 "yM" = (
 /obj/structure/table/stone_small,
 /obj/effect/spawner/map_spawner/loot/potion_vitals{
-	pixel_x = -9;
-	pixel_y = 0
+	pixel_x = -9
 	},
 /obj/effect/spawner/map_spawner/loot/potion_vitals{
 	pixel_x = 8;
@@ -4298,8 +4223,7 @@
 /area/indoors/lich)
 "yY" = (
 /obj/item/clothing/neck/psycross/silver{
-	pixel_x = -9;
-	pixel_y = 0
+	pixel_x = -9
 	},
 /obj/item/clothing/neck/psycross/g{
 	pixel_x = 2;
@@ -4319,8 +4243,7 @@
 /area/indoors/lich)
 "ze" = (
 /obj/structure/fluff/railing/wood{
-	dir = 8;
-	icon_state = "woodrailing"
+	dir = 8
 	},
 /turf/open/floor/cobblerock,
 /area/outdoors/bog)
@@ -4391,8 +4314,7 @@
 	gid = "Marshgate"
 	},
 /obj/machinery/light/fueled/wallfire/candle{
-	pixel_y = -32;
-	pixel_x = 0
+	pixel_y = -32
 	},
 /turf/open/floor/grass/cold,
 /area/outdoors/bog)
@@ -4428,8 +4350,7 @@
 /area/outdoors/bog)
 "zQ" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /turf/open/floor/ruinedwood,
 /area/indoors/mountains)
@@ -4494,8 +4415,7 @@
 	pixel_y = 9
 	},
 /obj/item/paper/scroll{
-	pixel_x = -10;
-	pixel_y = 0
+	pixel_x = -10
 	},
 /obj/item/paper/scroll{
 	pixel_x = -4;
@@ -4558,8 +4478,7 @@
 "Ao" = (
 /obj/structure/stairs/stone,
 /obj/structure/fluff/railing/wood{
-	dir = 8;
-	icon_state = "woodrailing"
+	dir = 8
 	},
 /turf/open/floor/naturalstone,
 /area/outdoors/bog)
@@ -4621,13 +4540,6 @@
 /obj/structure/bridge_stakes,
 /turf/open/floor/grass/cold,
 /area/outdoors/bog)
-"AF" = (
-/obj/structure/stairs{
-	icon_state = "stairs";
-	dir = 1
-	},
-/turf/open/floor/ruinedwood,
-/area/indoors/lich)
 "AG" = (
 /obj/item/natural/rock,
 /turf/open/floor/churchrough/purple,
@@ -4708,12 +4620,10 @@
 /area/indoors/mountains)
 "Bg" = (
 /obj/structure/fluff/walldeco/church/line{
-	dir = 4;
-	icon_state = "churchslate"
+	dir = 4
 	},
 /obj/structure/fluff/walldeco/church/line{
-	dir = 4;
-	icon_state = "churchslate"
+	dir = 4
 	},
 /turf/open/floor/churchrough/purple,
 /area/indoors/lich)
@@ -4756,7 +4666,6 @@
 /area/indoors/mountains)
 "Bs" = (
 /obj/structure/stairs{
-	icon_state = "stairs";
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/darker,
@@ -4788,15 +4697,13 @@
 /area/outdoors/bog)
 "BE" = (
 /obj/structure/stairs{
-	dir = 4;
-	icon_state = "stairs"
+	dir = 4
 	},
 /turf/open/floor/ruinedwood,
 /area/indoors/mountains)
 "BG" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /turf/open/floor/tile/masonic/inverted,
 /area/indoors/lich)
@@ -5101,7 +5008,6 @@
 /area/indoors/lich)
 "Dj" = (
 /obj/structure/stairs{
-	icon_state = "stairs";
 	dir = 1
 	},
 /obj/structure/fluff/railing/border{
@@ -5320,8 +5226,7 @@
 /area/outdoors/bog)
 "EA" = (
 /obj/structure/fluff/walldeco/church/line{
-	dir = 1;
-	icon_state = "churchslate"
+	dir = 1
 	},
 /obj/structure/table/stone_small,
 /turf/open/floor/church/purple,
@@ -5435,7 +5340,6 @@
 /area/indoors/mountains)
 "Fd" = (
 /obj/machinery/light/fueled/wallfire{
-	pixel_y = 0;
 	pixel_x = 32
 	},
 /turf/open/floor/ruinedwood/darker,
@@ -5509,8 +5413,7 @@
 	dir = 1
 	},
 /obj/structure/fluff/railing/border{
-	dir = 9;
-	icon_state = "border"
+	dir = 9
 	},
 /turf/open/floor/ruinedwood/turned/darker,
 /area/indoors/lich)
@@ -5519,8 +5422,7 @@
 	dir = 8
 	},
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /turf/open/floor/church/purple,
 /area/outdoors/bog)
@@ -5710,8 +5612,7 @@
 /area/outdoors/bog)
 "GP" = (
 /obj/structure/fluff/railing/wood{
-	dir = 8;
-	icon_state = "woodrailing"
+	dir = 8
 	},
 /turf/open/floor/cobblerock,
 /area/indoors/lich)
@@ -5849,8 +5750,7 @@
 /area/outdoors/bog)
 "HD" = (
 /obj/structure/chair/wood/alt{
-	dir = 1;
-	icon_state = "chair2"
+	dir = 1
 	},
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/lich)
@@ -5916,8 +5816,7 @@
 /area/outdoors/bog)
 "Ib" = (
 /obj/structure/fluff/railing/wood{
-	dir = 1;
-	icon_state = "woodrailing"
+	dir = 1
 	},
 /turf/open/floor/ruinedwood,
 /area/outdoors/bog)
@@ -6027,8 +5926,7 @@
 /area/indoors/lich)
 "IJ" = (
 /obj/structure/stairs{
-	dir = 4;
-	icon_state = "stairs"
+	dir = 4
 	},
 /turf/open/floor/ruinedwood,
 /area/indoors/lich)
@@ -6051,7 +5949,6 @@
 /area/indoors/lich)
 "IQ" = (
 /obj/machinery/light/fueled/wallfire{
-	pixel_y = 0;
 	pixel_x = 32
 	},
 /obj/structure/chair/stool,
@@ -6129,8 +6026,7 @@
 /area/indoors/mountains)
 "Js" = (
 /obj/structure/fluff/walldeco/church/line{
-	dir = 1;
-	icon_state = "churchslate"
+	dir = 1
 	},
 /obj/structure/table/stone_small,
 /obj/item/reagent_containers/glass/cup/silver,
@@ -6197,8 +6093,7 @@
 "JH" = (
 /obj/structure/table/wood/fancy,
 /obj/item/reagent_containers/glass/cup/silver{
-	pixel_x = -7;
-	pixel_y = 0
+	pixel_x = -7
 	},
 /obj/item/reagent_containers/glass/cup/silver{
 	pixel_x = 9;
@@ -6228,8 +6123,7 @@
 /area/indoors/lich)
 "JQ" = (
 /obj/structure/fluff/railing/wood{
-	dir = 8;
-	icon_state = "woodrailing"
+	dir = 8
 	},
 /turf/open/floor/cobble,
 /area/indoors/lich)
@@ -6245,8 +6139,7 @@
 /area/indoors/lich)
 "JT" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -6344,8 +6237,7 @@
 /area/outdoors/bog)
 "Kp" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/reagent_containers/food/snacks/cooked/sausage/wiener,
@@ -6416,8 +6308,7 @@
 	dir = 4
 	},
 /obj/structure/fluff/railing/wood{
-	dir = 1;
-	icon_state = "woodrailing"
+	dir = 1
 	},
 /turf/open/floor/cobblerock,
 /area/outdoors/bog)
@@ -6467,13 +6358,6 @@
 /obj/effect/spawner/map_spawner/loot/armor,
 /turf/open/floor/twig,
 /area/indoors/mountains)
-"Lg" = (
-/obj/structure/fluff/railing/border{
-	dir = 9;
-	icon_state = "border"
-	},
-/turf/open/floor/ruinedwood,
-/area/indoors/mountains)
 "Lj" = (
 /obj/item/rope/chain,
 /obj/effect/decal/cleanable/blood,
@@ -6481,8 +6365,7 @@
 /area/indoors/lich)
 "Lk" = (
 /obj/structure/fluff/railing/wood{
-	dir = 8;
-	icon_state = "woodrailing"
+	dir = 8
 	},
 /turf/open/floor/cobble,
 /area/outdoors/bog)
@@ -6595,8 +6478,7 @@
 /area/indoors/lich)
 "Mb" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/item/chair/stool,
 /turf/open/floor/ruinedwood,
@@ -6705,7 +6587,6 @@
 /area/indoors/lich)
 "MH" = (
 /obj/machinery/light/fueled/wallfire{
-	pixel_x = 0;
 	pixel_y = -31
 	},
 /obj/item/chair/stool,
@@ -6723,8 +6604,7 @@
 "MM" = (
 /obj/structure/stairs/stone,
 /obj/structure/fluff/railing/wood{
-	dir = 8;
-	icon_state = "woodrailing"
+	dir = 8
 	},
 /turf/open/floor/grass/cold,
 /area/indoors/lich)
@@ -6745,8 +6625,7 @@
 /area/outdoors/bog)
 "MS" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/chair/stool,
 /turf/open/floor/ruinedwood/darker,
@@ -6892,8 +6771,7 @@
 /area/indoors/lich)
 "Ob" = (
 /obj/structure/fluff/walldeco/church/line{
-	dir = 1;
-	icon_state = "churchslate"
+	dir = 1
 	},
 /obj/structure/table/stone_small,
 /obj/item/reagent_containers/glass/carafe/silver/redwine,
@@ -6933,8 +6811,7 @@
 /area/indoors/mountains)
 "Ok" = (
 /obj/structure/fluff/walldeco/church/line{
-	dir = 1;
-	icon_state = "churchslate"
+	dir = 1
 	},
 /turf/open/floor/churchrough/purple,
 /area/indoors/lich)
@@ -7045,8 +6922,7 @@
 	pixel_y = 28
 	},
 /obj/structure/fluff/walldeco/vinez/blue{
-	pixel_x = -6;
-	pixel_y = 0
+	pixel_x = -6
 	},
 /obj/structure/fluff/walldeco/vinez/blue{
 	pixel_x = 31;
@@ -7088,8 +6964,7 @@
 /area/indoors/lich)
 "Pf" = (
 /obj/structure/fluff/walldeco/church/line{
-	dir = 4;
-	icon_state = "churchslate"
+	dir = 4
 	},
 /turf/open/floor/churchrough/purple,
 /area/indoors/lich)
@@ -7143,18 +7018,6 @@
 "PE" = (
 /obj/structure/forcefield/strong,
 /turf/closed/wall/mineral/stonebrick/reddish,
-/area/indoors/lich)
-"PF" = (
-/obj/structure/fluff/psycross/zizocross{
-	pixel_x = 0;
-	pixel_y = 0
-	},
-/obj/effect/temp_visual/curse{
-	name = "Shadow of the Past";
-	pixel_x = 1;
-	pixel_y = 17
-	},
-/turf/open/floor/church/purple,
 /area/indoors/lich)
 "PG" = (
 /obj/effect/decal/cleanable/sigil{
@@ -7236,7 +7099,6 @@
 	dir = 4
 	},
 /obj/item/reagent_containers/food/snacks/rotten/breadslice{
-	pixel_x = 0;
 	pixel_y = -4
 	},
 /turf/open/floor/tile/kitchen,
@@ -7303,8 +7165,7 @@
 /area/indoors/lich)
 "QC" = (
 /obj/structure/fluff/statue/zizo{
-	pixel_x = 1;
-	pixel_y = 0
+	pixel_x = 1
 	},
 /obj/structure/fluff/railing/border{
 	dir = 9;
@@ -7328,8 +7189,7 @@
 "QL" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -7505,8 +7365,7 @@
 /area/indoors/lich)
 "Sb" = (
 /obj/structure/fluff/walldeco/church/line{
-	dir = 1;
-	icon_state = "churchslate"
+	dir = 1
 	},
 /obj/structure/fluff/statue/knight/r,
 /turf/open/floor/church/purple,
@@ -7639,8 +7498,7 @@
 /area/outdoors/bog)
 "SV" = (
 /obj/structure/fluff/walldeco/bigpainting{
-	pixel_x = -32;
-	pixel_y = 32
+	pixel_x = -32
 	},
 /turf/open/water/bath,
 /area/indoors/lich)
@@ -7747,8 +7605,7 @@
 /area/outdoors/bog)
 "Tz" = (
 /obj/structure/stairs{
-	dir = 4;
-	icon_state = "stairs"
+	dir = 4
 	},
 /obj/item/natural/cloth,
 /turf/open/floor/tile/bath,
@@ -7977,12 +7834,10 @@
 /area/outdoors/bog)
 "UK" = (
 /obj/structure/fluff/railing/wood{
-	dir = 1;
-	icon_state = "woodrailing"
+	dir = 1
 	},
 /obj/structure/fluff/railing/wood{
-	dir = 8;
-	icon_state = "woodrailing"
+	dir = 8
 	},
 /turf/open/floor/grass/cold,
 /area/outdoors/bog)
@@ -8190,13 +8045,6 @@
 "Wf" = (
 /turf/closed/wall/mineral/wooddark/horizontal,
 /area/indoors/cave)
-"Wg" = (
-/obj/structure/fluff/railing/border{
-	dir = 9;
-	icon_state = "border"
-	},
-/turf/open/floor/ruinedwood/darker,
-/area/outdoors/bog)
 "Wi" = (
 /mob/living/simple_animal/hostile/retaliate/shade,
 /turf/open/floor/tile/masonic/single,
@@ -8239,8 +8087,7 @@
 /area/indoors/lich)
 "Ww" = (
 /obj/structure/fluff/railing/wood{
-	dir = 1;
-	icon_state = "woodrailing"
+	dir = 1
 	},
 /turf/open/floor/ruinedwood/darker,
 /area/outdoors/bog)
@@ -8291,13 +8138,11 @@
 /area/indoors/lich)
 "WQ" = (
 /obj/structure/fluff/statue/psy{
-	pixel_x = -32;
 	pixel_y = 4
 	},
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/fluff/walldeco/church/line{
-	dir = 1;
-	icon_state = "churchslate"
+	dir = 1
 	},
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -8331,8 +8176,7 @@
 /area/indoors/lich)
 "Xb" = (
 /obj/structure/fluff/walldeco/church/line{
-	dir = 1;
-	icon_state = "churchslate"
+	dir = 1
 	},
 /turf/open/floor/church/purple,
 /area/outdoors/bog)
@@ -8359,8 +8203,7 @@
 /area/indoors/lich)
 "Xj" = (
 /obj/structure/fluff/railing/wood{
-	dir = 1;
-	icon_state = "woodrailing"
+	dir = 1
 	},
 /turf/open/floor/dirt,
 /area/outdoors/bog)
@@ -8440,8 +8283,7 @@
 	dir = 8
 	},
 /obj/structure/fluff/railing/border{
-	dir = 9;
-	icon_state = "border"
+	dir = 9
 	},
 /turf/open/floor/church/purple,
 /area/outdoors/bog)
@@ -8550,8 +8392,7 @@
 /area/indoors/lich)
 "Yt" = (
 /obj/structure/table/church{
-	dir = 1;
-	icon_state = "churchtable"
+	dir = 1
 	},
 /turf/open/floor/churchbrick,
 /area/outdoors/bog)
@@ -8610,8 +8451,7 @@
 	pixel_y = 16
 	},
 /obj/structure/fluff/walldeco/painting/queen{
-	pixel_x = 31;
-	pixel_y = 0
+	pixel_x = 31
 	},
 /turf/open/floor/ruinedwood/turned/darker,
 /area/indoors/lich)
@@ -8629,8 +8469,7 @@
 /area/indoors/lich)
 "YX" = (
 /obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
+	dir = 4
 	},
 /obj/structure/table/wood/plain,
 /turf/open/floor/ruinedwood/spiral,
@@ -8649,7 +8488,7 @@
 /turf/open/floor/church,
 /area/indoors/cave)
 "Zd" = (
-/turf/closed/transparent,
+/turf/closed,
 /area/indoors/lich)
 "Zg" = (
 /mob/living/carbon/human/species/skeleton/npc/warrior/skilled,
@@ -8770,13 +8609,6 @@
 /obj/structure/bars/cemetery,
 /turf/open/water/swamp,
 /area/outdoors/bog)
-"ZV" = (
-/obj/structure/fluff/railing/border{
-	dir = 4;
-	icon_state = "border"
-	},
-/turf/open/floor/ruinedwood/darker,
-/area/indoors/mountains)
 "ZX" = (
 /obj/effect/decal/cleanable/blood/gibs/core,
 /obj/effect/decal/remains/human,
@@ -29663,7 +29495,7 @@ TH
 lh
 lh
 dE
-kh
+Es
 jO
 td
 dE
@@ -63222,7 +63054,7 @@ VI
 dE
 dE
 dE
-AF
+iq
 FS
 lM
 dE
@@ -76831,7 +76663,7 @@ WT
 WT
 JF
 dG
-nB
+gr
 dJ
 De
 De
@@ -94895,8 +94727,8 @@ Oi
 Oi
 mK
 tW
-ZV
-ZV
+ep
+ep
 zQ
 cw
 wp
@@ -102429,8 +102261,8 @@ Oi
 xS
 db
 zQ
-ZV
-ZV
+ep
+ep
 Xr
 xS
 Oi
@@ -103827,7 +103659,7 @@ Ey
 hz
 hz
 hz
-Lg
+pU
 wp
 Oi
 Oi
@@ -104659,7 +104491,7 @@ Ey
 hz
 Dc
 Dc
-Lg
+pU
 Xd
 Oi
 Oi
@@ -109725,7 +109557,7 @@ bG
 xS
 xS
 db
-ZV
+ep
 zQ
 wp
 me
@@ -122609,7 +122441,7 @@ uY
 jz
 jz
 uY
-PF
+hR
 Wn
 Bv
 Bv
@@ -124766,7 +124598,7 @@ vN
 vN
 vN
 rj
-Wg
+Jz
 vN
 vN
 pB

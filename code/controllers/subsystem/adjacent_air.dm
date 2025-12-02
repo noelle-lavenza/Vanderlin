@@ -42,6 +42,12 @@ SUBSYSTEM_DEF(adjacent_air)
 		else
 			return CanAtmosPass
 
+/atom/proc/CanAtmosPassUp(turf/T)
+	return CanAtmosPass(T)
+
+/atom/proc/CanAtmosPassDown(turf/T)
+	return CanAtmosPass(T)
+
 /turf
 	//list of open turfs adjacent to us
 	var/list/atmos_adjacent_turfs
@@ -67,9 +73,6 @@ SUBSYSTEM_DEF(adjacent_air)
 		return
 	//Check atmos adjacency to cut off any disconnected groups
 	if(liquids.liquid_group)
-		var/assoc_atmos_turfs = list()
-		for(var/tur in atmos_adjacent_turfs)
-			assoc_atmos_turfs[tur] = TRUE
 		//Check any cardinals that may have a matching group
 		for(var/direction in GLOB.cardinals)
 			var/turf/T = get_step(src, direction)
@@ -119,73 +122,97 @@ SUBSYSTEM_DEF(adjacent_air)
 /turf/open/CanAtmosPass = ATMOS_PASS_PROC
 /turf/open/CanAtmosPassVertical = ATMOS_PASS_PROC
 
-/turf/open/CanAtmosPass(turf/T, vertical = FALSE)
-	var/dir = vertical? get_dir_multiz(src, T) : get_dir(src, T)
-	var/R = FALSE
-	if(vertical && !(zAirOut(dir, T) && T.zAirIn(dir, src)))
-		R = TRUE
-	if(blocks_air || T.blocks_air)
-		R = TRUE
-	if (T == src)
-		return !R
-	for(var/obj/O in contents+T.contents)
-		var/turf/other = (O.loc == src ? T : src)
-		if(!(vertical? (CANVERTICALATMOSPASS(O, other)) : (CANATMOSPASS(O, other))))
-			R = TRUE
+/turf/open/CanAtmosPass(turf/open/T)
+	if(!isopenturf(T))
+		return FALSE
+	for(var/obj/O in src)
+		if(!CANATMOSPASS(O, T))
+			return FALSE
+	for(var/obj/O in T)
+		if(!CANATMOSPASS(O, src))
+			return FALSE
+	return TRUE
 
-	return !R
+// Can air travel upwards from src to T?
+/turf/open/CanAtmosPassUp(turf/open/T)
+	if(!isopenturf(T))
+		return FALSE
+	if(!isopenspace(T)) // only openspace turfs let air enter going upwards (from below)
+		return FALSE
+	for(var/obj/O in src)
+		if(!CANATMOSPASSUP(O, T))
+			return FALSE
+	for(var/obj/O in T)
+		if(!CANATMOSPASSDOWN(O, src))
+			return FALSE
+	return TRUE
 
+// Can air travel downwards from src to T?
+/turf/open/CanAtmosPassDown(turf/open/T)
+	if(!isopenturf(T))
+		return FALSE
+	if(!isopenspace(src)) // only openspace turfs let air leave downwards (from below)
+		return FALSE
+	for(var/obj/O in src)
+		if(!CANATMOSPASSDOWN(O, T))
+			return FALSE
+	for(var/obj/O in T)
+		if(!CANATMOSPASSUP(O, src))
+			return FALSE
+	return TRUE
+
+// Only open turfs actually do anything in this proc, this just clears stuff after changeturf.
 /turf/proc/ImmediateCalculateAdjacentTurfs()
-	var/list/atmos_adjacent_turfs = src.atmos_adjacent_turfs
-	if(CANATMOSPASS(src, src))
-		for(var/direction in GLOB.cardinals)
-			var/turf/T = get_step(src, direction)
-			if(!isopenturf(T))
-				continue
-			if(!(blocks_air || T.blocks_air) && CANATMOSPASS(T, src))
-				LAZYINITLIST(atmos_adjacent_turfs)
-				LAZYINITLIST(T.atmos_adjacent_turfs)
-				atmos_adjacent_turfs[T] = TRUE
-				T.atmos_adjacent_turfs[src] = TRUE
-			else
-				if (atmos_adjacent_turfs)
-					atmos_adjacent_turfs -= T
-				if (T.atmos_adjacent_turfs)
-					T.atmos_adjacent_turfs -= src
-				UNSETEMPTY(T.atmos_adjacent_turfs)
+	if(atmos_adjacent_turfs) // we have neighbors to remove from when we were an open turf
+		for(var/turf/neighbor in atmos_adjacent_turfs) // disconnect from neighbors
+			LAZYREMOVE(neighbor.atmos_adjacent_turfs, src)
+		LAZYNULL(src.atmos_adjacent_turfs)
+	return
 
-	if(CANVERTICALATMOSPASS(src, src))
-		for(var/direction in GLOB.cardinals)
-			var/turf/T = get_step(src, direction)
-			var/turf/above_turf = GET_TURF_ABOVE(T)
-			if(isopenturf(above_turf))
-				if(!(blocks_air || above_turf.blocks_air) && CANVERTICALATMOSPASS(above_turf, src))
-					LAZYINITLIST(atmos_adjacent_turfs)
-					LAZYINITLIST(above_turf.atmos_adjacent_turfs)
-					atmos_adjacent_turfs[above_turf] = TRUE
-					above_turf.atmos_adjacent_turfs[src] = TRUE
-				else
-					if (atmos_adjacent_turfs)
-						atmos_adjacent_turfs -= above_turf
-					if (above_turf.atmos_adjacent_turfs)
-						above_turf.atmos_adjacent_turfs -= src
-					UNSETEMPTY(above_turf.atmos_adjacent_turfs)
-			var/turf/below_turf = GET_TURF_BELOW(T)
-			if(isopenturf(below_turf))
-				if(!(blocks_air || below_turf.blocks_air) && CANVERTICALATMOSPASS(below_turf, src))
-					LAZYINITLIST(atmos_adjacent_turfs)
-					LAZYINITLIST(below_turf.atmos_adjacent_turfs)
-					atmos_adjacent_turfs[below_turf] = TRUE
-					below_turf.atmos_adjacent_turfs[src] = TRUE
-				else
-					if (atmos_adjacent_turfs)
-						atmos_adjacent_turfs -= below_turf
-					if (below_turf.atmos_adjacent_turfs)
-						below_turf.atmos_adjacent_turfs -= src
-					UNSETEMPTY(below_turf.atmos_adjacent_turfs)
+/turf/open/ImmediateCalculateAdjacentTurfs()
+	var/list/atmos_adjacent_turfs = src.atmos_adjacent_turfs // local variable to avoid datum var access overhead
+	for(var/direction in GLOB.cardinals)
+		var/turf/neighbor = get_step(src, direction)
+		if(!isopenturf(neighbor))
+			continue
+		if(CANATMOSPASS(neighbor, src))
+			LAZYINITLIST(atmos_adjacent_turfs)
+			LAZYINITLIST(neighbor.atmos_adjacent_turfs)
+			atmos_adjacent_turfs[neighbor] = TRUE
+			neighbor.atmos_adjacent_turfs[src] = TRUE
+		else
+			if (atmos_adjacent_turfs)
+				atmos_adjacent_turfs -= neighbor // do not use lazyremove, we do UNSETEMPTY later
+			LAZYREMOVE(neighbor.atmos_adjacent_turfs, src)
+
+	var/turf/above_turf = GET_TURF_ABOVE(src)
+	if(isopenturf(above_turf))
+		if(CANATMOSPASSUP(above_turf, src))
+			LAZYINITLIST(atmos_adjacent_turfs)
+			LAZYINITLIST(above_turf.atmos_adjacent_turfs)
+			atmos_adjacent_turfs[above_turf] = TRUE
+			above_turf.atmos_adjacent_turfs[src] = TRUE
+		else
+			if (atmos_adjacent_turfs)
+				atmos_adjacent_turfs -= above_turf
+			if (above_turf.atmos_adjacent_turfs)
+				above_turf.atmos_adjacent_turfs -= src
+			UNSETEMPTY(above_turf.atmos_adjacent_turfs)
+	var/turf/below_turf = GET_TURF_BELOW(src)
+	if(isopenturf(below_turf))
+		if(CANATMOSPASSDOWN(below_turf, src))
+			LAZYINITLIST(atmos_adjacent_turfs)
+			LAZYINITLIST(below_turf.atmos_adjacent_turfs)
+			atmos_adjacent_turfs[below_turf] = TRUE
+			below_turf.atmos_adjacent_turfs[src] = TRUE
+		else
+			if (atmos_adjacent_turfs)
+				atmos_adjacent_turfs -= below_turf
+			if (below_turf.atmos_adjacent_turfs)
+				below_turf.atmos_adjacent_turfs -= src
+			UNSETEMPTY(below_turf.atmos_adjacent_turfs)
 	UNSETEMPTY(atmos_adjacent_turfs)
 	src.atmos_adjacent_turfs = atmos_adjacent_turfs
-
 
 //returns a list of adjacent turfs that can share air with this one.
 //alldir includes adjacent diagonal tiles that can share

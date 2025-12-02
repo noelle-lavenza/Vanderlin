@@ -59,14 +59,6 @@
 		return TRUE
 	return FALSE
 
-//direction is direction of travel of air
-/turf/open/zAirIn(direction, turf/source)
-	return (direction == DOWN)
-
-//direction is direction of travel of air
-/turf/open/zAirOut(direction, turf/source)
-	return (direction == UP)
-
 /turf/open/proc/freon_gas_act()
 	for(var/obj/I in contents)
 		if(I.resistance_flags & FREEZE_PROOF)

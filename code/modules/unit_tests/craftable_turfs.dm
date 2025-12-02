@@ -32,7 +32,6 @@
 		/turf/open/floor/plank,
 		/turf/closed/wall,
 		/turf/open/floor/sandstone,
-		/turf/closed/transparent,
 		/turf/closed/dungeon_void,
 		/turf/closed/sea_fog,
 		/turf/template_noop,
