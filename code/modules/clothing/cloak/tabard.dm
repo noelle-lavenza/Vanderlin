@@ -22,70 +22,27 @@
 		pic.color = get_detail_color()
 	. += pic
 
-/obj/item/clothing/cloak/tabard/attack_hand_secondary(mob/user, params)
-	. = ..()
-	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
-		return
-	. = SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-	if(picked)
-		return
-	var/the_time = world.time
-	var/design = input(user, "Select a design.","Tabard Design") as null|anything in list("None", "Symbol", "Split", "Quadrants", "Boxes", "Diamonds")
-	if(!design)
-		return
-	if(world.time > (the_time + 30 SECONDS))
-		return
-	if(design == "Symbol")
-		design = null
-		design = input(user, "Select a symbol.","Tabard Design") as null|anything in list("chalice","psy","peace","z","imp","skull","widow","arrow")
+/obj/item/clothing/cloak/tabard/get_heraldry_designs()
+	return list("None", "Symbol", "Split", "Quadrants", "Boxes", "Diamonds")
+
+/obj/item/clothing/cloak/tabard/proc/get_heraldry_symbols(mob/user, design)
+	return list("chalice","psy","peace","z","imp","skull","widow","arrow")
+
+/obj/item/clothing/cloak/tabard/heraldry_resolve_design(mob/user, design)
+	var/list/symbols = get_heraldry_symbols(user, design)
+	if(design == "Symbol" && length(symbols))
+		design = input(user, "Select a symbol.","Tabard Design") as null|anything in symbols
 		if(!design)
-			return
-		design = "_[design]"
-	var/colorone = input(user, "Select a primary color.","Tabard Design") as null|anything in CLOTHING_COLOR_NAMES
-	if(!colorone)
-		return
-	var/colortwo
-	if(design != "None")
-		colortwo = input(user, "Select a primary color.","Tabard Design") as null|anything in CLOTHING_COLOR_NAMES
-		if(!colortwo)
-			return
-	if(world.time > (the_time + 30 SECONDS))
-		return
-	if(design != "None")
-		detail_tag = design
-	switch(design)
-		if("Split")
-			detail_tag = "_spl"
-		if("Quadrants")
-			detail_tag = "_quad"
-		if("Boxes")
-			detail_tag = "_box"
-		if("Diamonds")
-			detail_tag = "_dim"
-	color = clothing_color2hex(colorone)
-	if(colortwo)
-		detail_color = clothing_color2hex(colortwo)
-	update_appearance(UPDATE_ICON)
-	if(ismob(loc))
-		var/mob/L = loc
-		L.update_inv_cloak()
-	if(alert("Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
-		color = initial(color)
-		detail_tag = initial(detail_tag)
-		detail_color = initial(detail_color)
-		update_appearance(UPDATE_ICON)
-		if(ismob(loc))
-			var/mob/L = loc
-			L.update_inv_cloak()
-		return
-	picked = TRUE
+			return null // abort setup
+		return "_[design]"
+	return ..() // base design
 
 /obj/item/clothing/cloak/tabard/knight
 	color = CLOTHING_PLUM_PURPLE
 	uses_lord_coloring = LORD_PRIMARY
 
-/obj/item/clothing/cloak/tabard/knight/attack_hand_secondary(mob/user, params)
-	return
+/obj/item/clothing/cloak/tabard/knight/select_heraldry(mob/user)
+	return SECONDARY_ATTACK_CALL_NORMAL // pretend heraldry doesn't even exist for this
 
 /obj/item/clothing/cloak/tabard/crusader
 	detail_tag = "_psy"
@@ -94,76 +51,46 @@
 	. = ..()
 	update_appearance(UPDATE_ICON)
 
-/obj/item/clothing/cloak/tabard/crusader/attack_hand_secondary(mob/user, params)
-	. = ..()
-	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
-		return
-	. = SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-	if(picked)
-		return
-	var/the_time = world.time
-	var/design = input(user, "Select a design.","Tabard Design") as null|anything in list("Default", "Gold Cross", "Jeruah", "BlackGold", "BlackWhite")
-	if(!design)
-		return
-	if(world.time > (the_time + 30 SECONDS))
-		return
-	if(design == "Gold Cross")
-		detail_color = "#b5b004"
-	if(design == "Jeruah")
-		detail_color = "#b5b004"
-		color = "#249589"
-	if(design == "BlackGold")
-		detail_color = CLOTHING_MUSTARD_YELLOW
-		color = CLOTHING_SOOT_BLACK
-	if(design == "BlackWhite")
-		detail_color = CLOTHING_WHITE
-		color = CLOTHING_SOOT_BLACK
-	update_appearance(UPDATE_ICON)
-	if(ismob(loc))
-		var/mob/L = loc
-		L.update_inv_cloak()
-	if(alert("Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
-		detail_color = initial(detail_color)
-		color = initial(color)
-		update_appearance(UPDATE_ICON)
-		if(ismob(loc))
-			var/mob/L = loc
-			L.update_inv_cloak()
-		return
-	picked = TRUE
+/obj/item/clothing/cloak/tabard/crusader/get_heraldry_designs()
+	return list("Default", "Gold Cross", "Jeruah", "BlackGold", "BlackWhite")
 
-/obj/item/clothing/cloak/tabard/crusader/tief/attack_hand_secondary(mob/user, params)
-	. = ..()
-	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
-		return
-	. = SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-	if(picked)
-		return
-	var/the_time = world.time
-	var/design = input(user, "Select a design.","Tabard Design") as null|anything in list("Default", "RedBlack", "BlackRed")
-	if(!design)
-		return
-	if(world.time > (the_time + 30 SECONDS))
-		return
-	if(design == "RedBlack")
-		detail_color = CLOTHING_SOOT_BLACK
-		color = CLOTHING_BLOOD_RED
-	if(design == "BlackRed")
-		detail_color = CLOTHING_BLOOD_RED
-		color = CLOTHING_SOOT_BLACK
-	update_appearance(UPDATE_ICON)
-	if(ismob(loc))
-		var/mob/L = loc
-		L.update_inv_cloak()
-	if(alert("Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
-		detail_color = initial(detail_color)
-		color = initial(color)
-		update_appearance(UPDATE_ICON)
-		if(ismob(loc))
-			var/mob/L = loc
-			L.update_inv_cloak()
-		return
-	picked = TRUE
+/obj/item/clothing/cloak/tabard/crusader/apply_forced_heraldry_color(design)
+	if(uses_lord_coloring)
+		return TRUE // skip color selection entirely
+	switch(design)
+		if("Gold Cross")
+			detail_color = "#b5b004"
+			return TRUE
+		if("Jeruah")
+			detail_color = "#b5b004"
+			color = "#249589"
+			return TRUE
+		if("BlackGold")
+			detail_color = CLOTHING_MUSTARD_YELLOW
+			color = CLOTHING_SOOT_BLACK
+			return TRUE
+		if("BlackWhite")
+			detail_color = CLOTHING_WHITE
+			color = CLOTHING_SOOT_BLACK
+			return TRUE
+	return FALSE
+
+/obj/item/clothing/cloak/tabard/crusader/tief/get_heraldry_designs()
+	return list("Default", "RedBlack", "BlackRed")
+
+/obj/item/clothing/cloak/tabard/crusader/tief/apply_forced_heraldry_color(design)
+	if(uses_lord_coloring)
+		return TRUE // skip color selection entirely
+	switch(design)
+		if("RedBlack")
+			detail_color = CLOTHING_SOOT_BLACK
+			color = CLOTHING_BLOOD_RED
+			return TRUE
+		if("BlackRed")
+			detail_color = CLOTHING_BLOOD_RED
+			color = CLOTHING_SOOT_BLACK
+			return TRUE
+	return FALSE
 
 /obj/item/clothing/cloak/tabard/knight/guard
 	desc = "A tabard with the lord's heraldic colors."
@@ -172,40 +99,8 @@
 	detail_color = CLOTHING_PLUM_PURPLE
 	uses_lord_coloring = LORD_PRIMARY
 
-/obj/item/clothing/cloak/tabard/knight/guard/attack_hand_secondary(mob/user, params)
-	. = ..()
-	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
-		return
-	. = SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-	if(picked)
-		return
-	var/the_time = world.time
-	var/chosen = input(user, "Select a design.","Tabard Design") as null|anything in list("Split", "Quadrants", "Boxes", "Diamonds")
-	if(world.time > (the_time + 10 SECONDS))
-		return
-	if(!chosen)
-		return
-	switch(chosen)
-		if("Split")
-			detail_tag = "_spl"
-		if("Quadrants")
-			detail_tag = "_quad"
-		if("Boxes")
-			detail_tag = "_box"
-		if("Diamonds")
-			detail_tag = "_dim"
-	update_appearance(UPDATE_ICON)
-	if(ismob(loc))
-		var/mob/L = loc
-		L.update_inv_cloak()
-	if(alert("Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
-		detail_tag = initial(detail_tag)
-		update_appearance(UPDATE_ICON)
-		if(ismob(loc))
-			var/mob/L = loc
-			L.update_inv_cloak()
-		return
-	picked = TRUE
+/obj/item/clothing/cloak/tabard/knight/guard/get_heraldry_designs()
+	return list("Split", "Quadrants", "Boxes", "Diamonds")
 
 /obj/item/clothing/cloak/tabard/adept
 	detail_tag = "_psy"
@@ -216,5 +111,5 @@
 	. = ..()
 	update_appearance(UPDATE_ICON)
 
-/obj/item/clothing/cloak/tabard/adept/attack_hand_secondary(mob/user, params)
-	return
+/obj/item/clothing/cloak/tabard/adept/select_heraldry(mob/user)
+	return SECONDARY_ATTACK_CALL_NORMAL // pretend heraldry doesn't even exist for this
